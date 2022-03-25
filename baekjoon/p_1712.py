@@ -1,4 +1,4 @@
-import math
+
 in_str=input()
 fix_cost, p_cost, price = map(int,in_str.split())
 
@@ -8,6 +8,6 @@ check=True
 if p_cost >= price:
     print(-1)
 else:
-    print(math.ceil((fix_cost+1) / ( price - p_cost))) 
+    print(fix_cost // ( price - p_cost) +1) 
     
     
