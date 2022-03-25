@@ -45,25 +45,25 @@ for n in range( 1, min(x_size,y_size) ):
 
     for j in range(min_idx_y, max_idx_y):
         idx_total=idx_total+1
-        print("matrix[%d][%d]=%d in set1" %(min_idx_x,j, idx_total))
+        #print("matrix[%d][%d]=%d in set1" %(min_idx_x,j, idx_total))
         matrix[min_idx_x][j]=idx_total
 
 
     for i in range(min_idx_x, max_idx_x):
         idx_total=idx_total+1
-        print("matrix[%d][%d]=%d in set2" %(i, max_idx_y, idx_total))
+        #print("matrix[%d][%d]=%d in set2" %(i, max_idx_y, idx_total))
         matrix[i][max_idx_y]=idx_total
 
 
     for j in range(max_idx_y,min_idx_y,-1):
         idx_total=idx_total+1
-        print("matrix[%d][%d]=%d in set3" %(max_idx_x, j, idx_total))
+        #print("matrix[%d][%d]=%d in set3" %(max_idx_x, j, idx_total))
         matrix[max_idx_x][j]=idx_total
 
 
     for i in range(max_idx_x,min_idx_x,-1):
         idx_total=idx_total+1
-        print("matrix[%d][%d]=%d in set4" %(i, min_idx_y, idx_total))
+        #print("matrix[%d][%d]=%d in set4" %(i, min_idx_y, idx_total))
         matrix[i][min_idx_y]=idx_total
 
 

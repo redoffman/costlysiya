@@ -95,7 +95,7 @@ class Point:
             self.print_matrix()
             print("x,y,dir=[%d,%d,%s]" %(self.x,self.y,self.direction))
             print()
-            input()
+            input("Press Enter Key ...5")
 
     def update_cell(self):
         if self.direction == "UP" :
