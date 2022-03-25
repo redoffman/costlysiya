@@ -1,10 +1,19 @@
-def print_star(n):
+def pattern( row, column, N):
+    
+    if((row / N) % 3 == 1 and (column / N) % 3 == 1):
+        print(" ",end="") 
+    else :
+        if( N/3 == 0) :
+            print("*",end="")
+        else :
+            pattern(row, column, N/3)
 
-    if n == 3:
-        print("***", end="")
-        print("* *", end="")
-        print("***", end="")
-    else:
-        print_star(int(n/3)) 
 
-print_star(int(input()))
+VAL=9
+
+for i in range(VAL) :
+    for j in range(VAL):
+        pattern(i, j, VAL)
+    print("A")
+
+    
