@@ -19,7 +19,8 @@ def get_sum_side( list, i, j):
     sum_val += get_value( list, i-1, j+1) + get_value( list, i, j+1 ) + get_value(list, i+1, j+1)
 
     if sum_val < 10 :
-        return "{}".format(sum_val)  
+        return str(sum_val) 
+        
     else :
         return "M"
 
@@ -35,16 +36,15 @@ print( list )
 
 result=[]
 for i in range( len(list) ):
-    str=""
+    str_result=""
     for j in range(len(list[i])):
-        #print( i,j, list[i][j] )
-        str+=get_sum_side( list, i, j)
-    result.append( str)
+        str_result+=get_sum_side( list, i, j)
+    result.append( str_result)
 
 print(result)
 
-for str in result:
-    for ch in str :
+for s in result:
+    for ch in s :
         print( ch, end="")
     print()
 
