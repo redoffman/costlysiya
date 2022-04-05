@@ -38,7 +38,10 @@ result=[]
 for i in range( len(list) ):
     str_result=""
     for j in range(len(list[i])):
-        str_result+=get_sum_side( list, i, j)
+        if list[i][j].isdigit() == True:
+            str_result+="*"
+        else:
+            str_result+=get_sum_side( list, i, j)
     result.append( str_result)
 
 print(result)
