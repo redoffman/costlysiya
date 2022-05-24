@@ -7,15 +7,12 @@ def  C_ALL( c_list, lt=[] ):
     ret_val = 0 
     
     if sum( lt ) > cupon :
-        return 0   
+        return    
 
     if len(c_list) == 0 : 
         if len(lt) > 0 :
-            print( "append:", c_list, lt )
             result_list.append(lt)
-            return 1
-        else :
-            return 0
+        return 
 
    
     lt_first=lt.copy()
@@ -24,11 +21,11 @@ def  C_ALL( c_list, lt=[] ):
     C_ALL( c_list[1:], lt_first )  
     C_ALL( c_list[1:], lt.copy() ) 
    
-    return 10
+    return 
     
     
 
-menus= [1000,2000,3000,4000,5000,6000]
+menus= [1000,2000,3000,4000,5000,6000,500,300,200]
 C_ALL( menus )
 
 print( result_list)
